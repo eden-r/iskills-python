@@ -183,7 +183,10 @@ while check_for_endstate(playing_board) == 'continue':
 	for player in [player1, player2]:
 		show_game_board_using_format(playing_board)
 		print("{player}'s turn: ".format(player=player))
-		choose_spot(playing_board, player)
+
+		if check_for_endstate(playing_board) == 'continue':
+			choose_spot(playing_board, player)
+			
 		if check_for_endstate(playing_board) == 'draw':
 			print("draw")
 
