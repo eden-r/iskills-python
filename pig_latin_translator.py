@@ -7,12 +7,12 @@ def pigLatinTranslator(word):
         print ("Please submit a longer word.")
     else:
         if word[0] in vowels:
-            return word + "-yay"
+            return word + "yay"
         for letter in word:
             word = word[1:] + word[0]
             if word[0] in vowels:
-                return word + "-ay"
-        return word[1:] + word[0] + "-ay" 
+                return word + "ay"
+        return word[1:] + word[0] + "ay" 
 
 
 wordsToTranslate = ['example', 'school', 'question', 'fig',  'answer', 'computer', 'eliminate', 'shred', 'why']
