@@ -180,11 +180,10 @@ def player_chooses_symbol(player1_symbol, player2_symbol):
 		return 'computer', 'human'
 
 
-# Now it's time to start the game
-# First we need to make the game board. We'll assign it to the variable "playing_board"
+# Make the game board. I've assigned it to the variable "playing_board"
 playing_board = make_new_game_board()
 
-# Before we start the game, we want to choose who goes first
+# Choose which player/symbol goes first
 player1, player2 = choose_starting_player()
 
 # assign player types
@@ -198,7 +197,7 @@ player_turn_elements = [
 	{'symbol': player2, 'type': player2_type}
 	]
 
-# Now we want to start the game, and we want to it keep going while the game doesn't have a win or draw
+# Start the game, and keep going while the game doesn't have a win or draw
 # I've used a while loop that uses the "check_for_endstate" function
 while check_for_endstate(playing_board) == 'continue':
 
